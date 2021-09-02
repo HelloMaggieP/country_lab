@@ -27,13 +27,16 @@ const AppContainer = () => {
         return country.population
     })
 
+    let totalPopulation = countriesPopulation.reduce(function (previousValue, currentValue) {
+        return previousValue + currentValue
+    }, 0)
 
-
+    console.log(totalPopulation);
 
 
     return(
         <>
-            <Header />
+            <Header totalPopulation={totalPopulation}/>
             <p>This is the AppContainer</p>
             {countryItems}
         </>    

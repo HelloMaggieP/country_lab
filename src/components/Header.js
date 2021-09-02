@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({totalPopulation}) => {
     return (
         <>
-            <h2>Header</h2>
+            <h1>Countries Of The World!</h1>
+            <h3>World Population: {totalPopulation}</h3>
         </>
     )
 }
