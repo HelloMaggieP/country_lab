@@ -5,7 +5,7 @@ import AppContainer from './containers/AppContainer';
 function App() {
   return (
     <>
-    <h1>Hey!</h1>
+    <p>This is App.js</p>
     <AppContainer/>
     </>
   );
