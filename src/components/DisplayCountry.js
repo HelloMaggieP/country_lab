@@ -6,20 +6,21 @@ const DisplayCountry = ({country}) => {
         return language.name
     })
 
-    // console.log(languages);
+    console.log(languageList);
 
 
-    const displayLanguages = function(languageList){
-        for (language of languages){
-            return language
-        }
-    }
+    // const displayLanguages = function(languageList){
+    //     for (language of languageList){
+    //         return language
+    //     }
+    // }
 
     return (
         <>
             <h3>Name: {country.name}</h3>
             <h3>Capital: {country.capital}</h3>
-            <h3>Languages: {displayLanguages}</h3>
+            <h3>Languages: </h3> 
+            {/* {displayLanguages} */}
         </>
     )
 }
