@@ -1,16 +1,32 @@
-import React from 'react';
-import CountryList from '../components/CountriesList';
+import React, {useState} from 'react';
+import '../App.css';
+import CountriesList from '../components/CountriesList';
 import DisplayCountry from '../components/DisplayCountry';
 import FavoriteCountries from '../components/FavoriteCountries';
 
 
-const CountriesContainer = () => {
+const CountriesContainer = ({countries}) => {
+
+    const [selectedCountry, setSelectedCountry] = useState(null);
+
+    if (selectedCountry){
+        console.log(selectedCountry);
+    }
+
+    const onCountryClick = function(country){
+        setSelectedCountry(country);
+    }
+
     return (
         <>
-            <p>This is the CountriesContainer</p>
-            <CountryList/>
-            <DisplayCountry/>
-            <FavoriteCountries/>
+            <div id="containers">
+                <CountriesList countries={countries} onCountryClick={onCountryClick} />
+                <hr/>
+
+                {selectedCountry ? <DisplayCountry country={selectedCountry} /> :null}
+
+                <FavoriteCountries/>
+            </div>
         </>
     )
 }

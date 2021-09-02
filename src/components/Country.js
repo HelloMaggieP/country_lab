@@ -1,9 +1,15 @@
 import React from 'react';
 
-const Country = () => {
+const Country = ({country, onCountryClick}) => {
+
+    const handleClick = function(){
+        onCountryClick(country)
+    }
+
     return (
         <>
-            <p>This is the Country</p>
+        <h3 onClick={handleClick}>{country.name}</h3>
+        {/* <img src={country.flag}>Country flag</img>         */}
         </>
     )
 }
